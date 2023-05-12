@@ -102,8 +102,7 @@ actions:
     path: '\Microsoft\Windows\UpdateOrchestrator'
     operation: deleteFolder
   - !scheduledTask:
-    path: '\Microsoft\Windows\Windows Defender'
-    operation: deleteFolder
+
   # - !scheduledTask:
   #   path: '\Microsoft\Windows\WindowsUpdate'
   #   operation: deleteFolder
@@ -187,7 +186,7 @@ actions:
   - !registryValue:
     path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer'
     value: 'SettingsPageVisibility'
-    data: 'hide:quiethours;tabletmode;project;crossdevice;remotedesktop;mobile-devices;network-cellular;network-wificalling;network-airplanemode;nfctransactions;maps;sync;speech;easeofaccess-magnifier;easeofaccess-narrator;easeofaccess-speechrecognition;easeofaccess-eyecontrol;privacy-speech;privacy-general;privacy-speechtyping;privacy-feedback;privacy-activityhistory;privacy-location;privacy-callhistory;privacy-eyetracker;privacy-messaging;privacy-automaticfiledownloads;windowsupdate;delivery-optimization;windowsdefender;backup;recovery;findmydevice;windowsinsider'
+    data: 'hide:quiethours;tabletmode;project;crossdevice;remotedesktop;mobile-devices;network-cellular;network-wificalling;network-airplanemode;nfctransactions;maps;sync;speech;easeofaccess-magnifier;easeofaccess-narrator;easeofaccess-speechrecognition;easeofaccess-eyecontrol;privacy-speech;privacy-general;privacy-speechtyping;privacy-feedback;privacy-activityhistory;privacy-location;privacy-callhistory;privacy-eyetracker;privacy-messaging;privacy-automaticfiledownloads;windowsupdate;delivery-optimization;backup;recovery;findmydevice;windowsinsider'
     type: REG_SZ
 
     # Disable USB autorun/play
@@ -295,16 +294,6 @@ actions:
     type: REG_DWORD
   - !registryValue:
     path: 'HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\CloudExperienceHostOobe'
-    value: 'Start'
-    data: '0'
-    type: REG_DWORD
-  - !registryValue:
-    path: 'HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger'
-    value: 'Start'
-    data: '0'
-    type: REG_DWORD
-  - !registryValue:
-    path: 'HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger'
     value: 'Start'
     data: '0'
     type: REG_DWORD
